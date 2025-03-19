@@ -6,7 +6,8 @@ const app = express();
 const PORT = 3000;
 
 // Middleware
-app.use(cors());
+app.use(cors({ origin: "*" })); // Allow all origins
+
 app.use(express.json()); // Allows JSON body parsing
 
 // Routes
